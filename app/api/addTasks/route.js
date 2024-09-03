@@ -18,7 +18,7 @@ export async function POST(req) {
       });
     }
 
-    // Fetch project ID
+   
     const [projectResult] = await db.query(`SELECT id FROM projects WHERE name = ?`, [projectName]);
 
     if (!projectResult || projectResult.length === 0) {
@@ -30,7 +30,7 @@ export async function POST(req) {
 
     const projectId = projectResult[0].id;
 
-    // Fetch user ID
+    
     const [userResult] = await db.query(`SELECT id FROM users WHERE name = ?`, [assigned_to]);
 
     if (!userResult || userResult.length === 0) {
@@ -42,7 +42,7 @@ export async function POST(req) {
 
     const userId = userResult[0].id;
 
-    // Insert task
+ 
     const query = `INSERT INTO tasks (project_id, title, due_date, assigned_to, description, status) VALUES (?, ?, ?, ?, ?, ?)`;
     const [insertResult] = await db.query(query, [projectId, title, due_date, userId, description, status]);
 
