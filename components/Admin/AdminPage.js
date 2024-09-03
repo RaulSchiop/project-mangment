@@ -17,10 +17,42 @@ export default function AdminPage() {
     const [modalOpen, setModalIsOpen] = useState(false);
 
     const [modalOpen2, setModalIsOpen2] = useState(false);
+    const [modalOpen3,setModalIsOpen3]=useState(false);
+
     const [tasks,setTasks]=useState([])
+
+
+    async function createTask(event){
+      event.preventDefault();
+      const formData=new FormData(event.target)
+      const formDataObject = Object.fromEntries(formData.entries());
+      console.log(formDataObject);
+    try{
+      const response=await fetch(`/api/addTasks?title=${formDataObject.title}&due_date=${formDataObject.due_date}&assigned_to=${formDataObject.assigned_to}&description=${formDataObject.description}&projectName=${formDataObject.projectName}&status=${formDataObject.status}`,
+      {  method: 'POST',
+      headers: {
+          'Content-Type': 'application/json',
+      }})
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+      const data=await response.json()
+      setModalIsOpen3(false)
+      window.location.reload();
+      return data
+    }catch(error){
+      console.log(error)
+    }
+      
+
+
+      
+    }
+
 
     async function createNewProject(event){
         event.preventDefault();
+        
         const formData=new FormData(event.target)
         const name=formData.get('Name')
         const description=formData.get('Description')
@@ -29,6 +61,7 @@ export default function AdminPage() {
         console.log(name)
         console.log(description)
         console.log(owner)
+        
 
         try{
             const response=await fetch(`/api/createNewProject?Name=${name}&Description=${description}&owner=${owner}`,{
@@ -82,6 +115,13 @@ export default function AdminPage() {
 
     }
 
+    function handleCloseModal3() {
+      setModalIsOpen3(false);
+    
+  }
+  function openModal3() {
+      setModalIsOpen3(true);
+  }
 
 
     function handleCloseModal2() {
@@ -244,15 +284,34 @@ setProjects([])
             
         ))}
     <Modal show={modalOpen} onClose={handleClose}>
-        <ul>
+        <ul>   
+          <button onClick={openModal3} >+</button>
+
+          <Modal show={modalOpen3} onClose={handleCloseModal3}>
+          <h2>Add New Tasks</h2>
+                        <form onSubmit={createTask}>
+                           
+                            <input type="text" placeholder="Title"  name="title" />
+                            <input type="date" placeholder="Due date"  name="due_date" />
+                            <input type="text" placeholder="Assign to"  name="assigned_to" />
+                            <input type="text" placeholder="description" name="description"/>
+                            <input type="text" placeholder="Project name"  name="projectName" />
+                            <input type="text" placeholder="Status" name="status"/>
+                            <button type="submit" >Create Tasks</button>
+                        </form>
+            
+          </Modal>
             {tasks.length<1 ? <p>No tasks</p> :
+         
             tasks.map((items)=>(
-              
+             
                 <li key={items.id} className={classes.listModalDiv}>
                  <p style={{ color: 'red' }}>{items.status}</p>
                   <h4>{items.title}</h4>
                   <p style={{ color: '#007bff' }}>{formatDate(items.due_date)}</p>
                 </li>
+
+
 
            
             ))
