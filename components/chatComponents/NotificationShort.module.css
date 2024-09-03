@@ -1,0 +1,36 @@
+
+.notifContiner{
+   display: flex;
+   flex-direction: column;
+  
+}
+.pColor{
+    
+    color: #007bff;
+}
+
+.shortNotif{
+display: flex;
+justify-content: space-between;
+
+}
+
+.buttonShortNotif{
+font-size: 20px;
+border: none;
+color :#007bff;
+
+background-color: black;
+
+}
+.lastNotificatio{
+display: flex;
+color: black;
+flex-direction: column;
+align-items: start;
+width: 90%;
+padding: 20px;
+border-radius: 20px;
+background-color: #d3c7e2;
+
+}

@@ -1,0 +1,36 @@
+
+
+.header{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    
+    
+}
+@media screen {
+  
+}
+
+.userDiv{
+    background-color: #d3c7e2;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    color:black;
+    border-radius: 20px;
+    padding: 1px 15px;
+    letter-spacing: auto;
+    font-weight: 500;
+}
+
+.walcomeDiv{
+
+  border-radius: 20px;
+  background-color:#d3c7e2;  
+color:black;
+padding: 1px 15px;
+letter-spacing: auto;
+font-weight: 500;
+}

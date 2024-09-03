@@ -1,0 +1,29 @@
+
+.wrapper{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+background-color: #007bff;;
+border-radius: 20px;
+    padding: 20px;
+}
+
+
+.buttonInvite{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    justify-content: center;
+    padding: 10px;
+    background-color: #d3c7e2;
+    border-radius: 10px;
+    border: none;
+    
+
+}
+
+.Link{
+    text-decoration: none;
+}

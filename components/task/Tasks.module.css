@@ -1,0 +1,136 @@
+.wiget {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    
+  }
+ 
+
+  .button {
+  
+    color: #007bff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 300;
+    background-color: black;
+    border: 1px solid;
+    border-radius: 10px;
+   
+  }
+  
+  .listDiv {
+    margin-top: 10px;
+    font-size: 20px;
+  }
+  
+  .listDiv ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .listDiv li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .listDiv li h4 {
+    margin: 0 10px;
+  }
+  
+  .listDiv li p {
+    margin: 0;
+  }
+  .listDiv input {
+    border: 1px solid #007bff; 
+    border-radius: 5px;
+    height: 30px;
+    width: 30px; 
+    background-color: transparent; 
+    outline: none;
+    appearance:none;
+    cursor: pointer; 
+    position: relative; 
+  }
+  .listDiv input:checked::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 12px;
+    height: 6px;
+    border: solid #007bff;
+    border-width: 0 0 2px 2px;
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+
+
+.list{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+  .inputDiv{
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap:20px;
+    margin: 10px 0;
+ 
+  }
+  .inputDiv input{
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid #007bff; 
+  }
+  .inputDiv input:focus{
+    outline: none;
+  }
+
+  .buttonInput{
+
+    background-color: #007bff;
+    border: 1px solid #007bff; 
+    padding: 5px 20px;
+    color:white;
+    margin-top: 20px;
+    border-radius: 10px;
+  }
+
+  .formTitle{
+
+color: black;
+  }
+
+
+  .highlightedTile {
+    background-color: red; /* Light blue background */
+    border-radius: 50%;
+  }
+  
+  .tileContent {
+    font-size: 0.8em;
+    color: red;
+    text-align: center;
+  }
+  
+
+  @media (max-width: 1000px) {
+    .listDiv {
+      margin-top: 10px;
+      font-size: 15px;
+    }
+    .button {
+  
+   
+      font-size: 15px;
+    
+     
+    }
+    
+  }

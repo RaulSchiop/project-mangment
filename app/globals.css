@@ -1,0 +1,86 @@
+
+html, body {
+  height: 100%;
+  margin: 0;
+ 
+  font-family: Arial, sans-serif;
+  background-color: #d3c7e2;
+}
+
+.asideContent {
+  display: flex;
+  padding: 30px;
+  height: 100%; 
+}
+
+.mainPart {
+  border-radius: 20px;
+  margin-left: 30px;
+  width: 80%;
+  height: 90%; 
+  background-color: black; 
+  color: white;
+  padding: 30px;
+
+  overflow: hidden;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: repeat(3, auto); 
+  gap: 20px; 
+
+}
+
+.item {
+ 
+  border-radius: 20px;
+  padding: 10px;
+  text-align: center;
+}
+
+.item1 {
+  grid-row: span 2; /* Spans two rows in the first column */
+  grid-column: 1;   /* Places item in the first column */
+}
+
+.item2 {
+  grid-row: 1;      /* Places item in the first row of the second column */
+  grid-column: 2;   /* Places item in the second column */
+}
+
+.item3 {
+  grid-row: 2;      /* Places item in the second row of the second column */
+  grid-column: 2;   /* Places item in the second column */
+}
+
+.item4 {
+  grid-row: 3;      /* Places item in the third row of the second column */
+  grid-column: 2;   /* Places item in the second column */
+}
+
+.item5 {
+  grid-row: 3;      /* Places item in the third row of the first column */
+  grid-column: 1;   /* Places item in the first column */
+}
+
+/* Responsive query */
+@media (max-width: 1000px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* Single column */
+    grid-template-rows: auto;   /* Automatically adjust row heights */
+  }
+
+  .item1, .item2, .item3, .item4, .item5 {
+    grid-column: span 1; /* Each item spans one column */
+    grid-row: auto;      /* Each item takes its place in the next row */
+  }
+
+  .mainPart {
+    height: 90%; /* Adjust height to account for the bottom space */
+    width: 60%;
+    padding-bottom: 30px; /* Add padding at the bottom */
+    overflow: auto; /* Enable scrolling for main part on small screens */
+  }
+}
