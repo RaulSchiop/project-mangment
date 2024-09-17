@@ -34,3 +34,49 @@ border-radius: 20px;
 background-color: #d3c7e2;
 
 }
+
+.lastNotificatio li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.notifTask{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+
+}
+
+.blue{
+color: #007bff;
+}
+
+.black{
+    color: black;
+}
+.notifTaskModal {
+    display: flex;
+    color: black;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: white;
+    
+}
+
+.notifTaskModal li{
+list-style: none;
+
+}
+
+.notifTaskModal ul{
+    display: flex;
+    flex-direction: column;
+align-items: center;
+justify-content: center;
+}

@@ -6,7 +6,7 @@ import classes from "./Tasks.module.css";
 import { AnimatePresence, motion } from "framer-motion";
 
 
-export default function TaskWigetClient({ users }) {
+export default function TaskWigetClient() {
 
 
 
@@ -124,7 +124,7 @@ fetchDelete(id)
   return (
     <div>
       <motion.div variants={container} initial="hidden" animate="visible" className={classes.wiget}>
-        <h3>Today Tasks</h3>
+        <h3>Tasks</h3>
         
       </motion.div>
       <div className={classes.listDiv}>
