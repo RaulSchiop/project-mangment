@@ -59,13 +59,7 @@ export default function AsidePages(){
 </button>
 </motion.li>
 
-<motion.li className={classes.list}     whileHover={{ scale: 1.1 }}
-      transition={{ type: "spring", stiffness: 400, damping: 10 }} >
-<button  className={classes.iconsDiv}>
-<Image src={Settings} width={20} height={20} alt="settings icon"></Image>
-<Link href="/Settings" className={classes.link}><p>Setings</p></Link>
-</button>
-</motion.li>
+
 
 </motion.ul >
 
