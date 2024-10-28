@@ -31,4 +31,4 @@ volumes:
   mysql_data: 
 
 networks:
-  mynetwork: 
+  mynetwork:
