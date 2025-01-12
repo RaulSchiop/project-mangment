@@ -1,64 +1,53 @@
-.wrapper{
-    padding: 20px;
-    justify-content: center;
+.wrapper {
+   padding: 20px;
+   justify-content: center;
 }
 
-.wrapper ul{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 50px;
+.wrapper ul {
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   margin-top: 50px;
 }
 
-.wrapper li{
-    list-style: none;
+.wrapper li {
+   list-style: none;
 }
 
-.liDiv{
-    display: flex;
-    width: 50%;
-    font-size: 20px;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 20px;
-   
+.liDiv {
+   display: flex;
+   width: 50%;
+   font-size: 20px;
+   align-items: center;
+   justify-content: space-between;
+   margin-top: 20px;
 }
 
-.buttonsDiv{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    height: 20px;
-    width: 300px;
+.buttonsDiv {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 10px;
+   height: 20px;
+   width: 300px;
 }
 
 .button {
-  
-    color: #007bff;
-    border: none;
-    padding: 2px 7px;
-    cursor: pointer;
-    font-size: 15px;
-    font-weight: 300;
-    border: 1px solid;
-    border-radius: 10px;
-   
-  }
-
-
-
-
-
+   color: #007bff;
+   border: none;
+   padding: 2px 7px;
+   cursor: pointer;
+   font-size: 15px;
+   font-weight: 300;
+   border: 1px solid;
+   border-radius: 10px;
+}
 
 /* Modal task */
 
-
-.listModalDiv{
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap:100px;
-
+.listModalDiv {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap: 100px;
 }

@@ -1,49 +1,42 @@
-
 .calendar-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%; 
-  }
-  
-  .selected-date {
-    margin-top: 10px;
-    font-size: 16px;
-  }
-  
-  .react-calendar {
-    width: 90%; 
-    max-width: 700px; 
-    height: auto; 
-    border-radius: 10px;
-    padding: 20px;
-  }
-  
-  .react-calendar__tile--active {
-    background: #006edc;
-    color: white;
-  }
-  
-  
-  .react-calendar__tile--now {
-    background: #007bff;
-    color: white;
-  }
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   width: 100%;
+}
 
+.selected-date {
+   margin-top: 10px;
+   font-size: 16px;
+}
 
+.react-calendar {
+   width: 90%;
+   max-width: 700px;
+   height: auto;
+   border-radius: 10px;
+   padding: 20px;
+}
+
+.react-calendar__tile--active {
+   background: #006edc;
+   color: white;
+}
+
+.react-calendar__tile--now {
+   background: #007bff;
+   color: white;
+}
 
 .highlight-tile {
-  position: relative;
+   position: relative;
 }
 
 .task-indicator {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  position: absolute;
-  bottom: 5px;
-  right: 5px;
-  
+   width: 20px;
+   height: 20px;
+   border-radius: 50%;
+   position: absolute;
+   bottom: 5px;
+   right: 5px;
 }
-
-  

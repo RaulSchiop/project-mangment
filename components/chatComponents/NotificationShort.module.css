@@ -1,82 +1,72 @@
-
-.notifContiner{
+.notifContiner {
    display: flex;
    flex-direction: column;
-  
 }
-.pColor{
-    
-    color: #007bff;
+.pColor {
+   color: #007bff;
 }
 
-.shortNotif{
-display: flex;
-justify-content: space-between;
-
+.shortNotif {
+   display: flex;
+   justify-content: space-between;
 }
 
-.buttonShortNotif{
-font-size: 20px;
-border: none;
-color :#007bff;
+.buttonShortNotif {
+   font-size: 20px;
+   border: none;
+   color: #007bff;
 
-background-color: black;
-
+   background-color: black;
 }
-.lastNotificatio{
-display: flex;
-color: black;
-flex-direction: column;
-align-items: start;
-width: 90%;
-padding: 20px;
-border-radius: 20px;
-background-color: #d3c7e2;
-
+.lastNotificatio {
+   display: flex;
+   color: black;
+   flex-direction: column;
+   align-items: start;
+   width: 90%;
+   padding: 20px;
+   border-radius: 20px;
+   background-color: #d3c7e2;
 }
 
-.lastNotificatio li{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
+.lastNotificatio li {
+   display: flex;
+   align-items: center;
+   justify-content: center;
 }
 
-.notifTask{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1.5rem;
-
+.notifTask {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 1.5rem;
 }
 
-.blue{
-color: #007bff;
+.blue {
+   color: #007bff;
 }
 
-.black{
-    color: black;
+.black {
+   color: black;
 }
 .notifTaskModal {
-    display: flex;
-    color: black;
-    flex-direction: column;
-    align-items: center;
-    width: 90%;
-    padding: 20px;
-    border-radius: 20px;
-    background-color: white;
-    
+   display: flex;
+   color: black;
+   flex-direction: column;
+   align-items: center;
+   width: 90%;
+   padding: 20px;
+   border-radius: 20px;
+   background-color: white;
 }
 
-.notifTaskModal li{
-list-style: none;
-
+.notifTaskModal li {
+   list-style: none;
 }
 
-.notifTaskModal ul{
-    display: flex;
-    flex-direction: column;
-align-items: center;
-justify-content: center;
+.notifTaskModal ul {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
 }

@@ -1,11 +1,8 @@
-
-import AsideClient from "./AsideInside"
-export default function Aside(){
-
-    return (
+import AsideClient from "./AsideInside";
+export default function Aside() {
+   return (
       <>
-      <AsideClient></AsideClient>
+         <AsideClient></AsideClient>
       </>
-    )
-
+   );
 }
