@@ -1,34 +1,34 @@
-version: "3.8"
+# version: "3.8"
 
-services:
-   db:
-      image: mysql:8
-      environment:
-         MYSQL_ROOT_PASSWORD: my-secret-pw
-         MYSQL_DATABASE: nextjsdb
-      ports:
-         - "3306:3306"
-      volumes:
-         - mysql_data:/var/lib/mysql]
-      networks:
-         - mynetwork
+# services:
+#    db:
+#       image: mysql:8
+#       environment:
+#          MYSQL_ROOT_PASSWORD: my-secret-pw
+#          MYSQL_DATABASE: nextjsdb
+#       ports:
+#          - "3306:3306"
+#       volumes:
+#          - mysql_data:/var/lib/mysql]
+#       networks:
+#          - mynetwork
 
-   web:
-      build: .
-      ports:
-         - "3000:3000"
-      environment:
-         MYSQL_HOST: host.docker.internal
-         MYSQL_USER: root
-         MYSQL_PASSWORD: my-secret-pw
-         MYSQL_DATABASE: nextjsdb
-      depends_on:
-         - db
-      networks:
-         - mynetwork
+#    web:
+#       build: .
+#       ports:
+#          - "3000:3000"
+#       environment:
+#          MYSQL_HOST: host.docker.internal
+#          MYSQL_USER: root
+#          MYSQL_PASSWORD: my-secret-pw
+#          MYSQL_DATABASE: nextjsdb
+#       depends_on:
+#          - db
+#       networks:
+#          - mynetwork
 
-volumes:
-   mysql_data:
+# volumes:
+#    mysql_data:
 
-networks:
-   mynetwork:
+# networks:
+#    mynetwork:
