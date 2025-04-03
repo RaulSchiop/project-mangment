@@ -20,7 +20,6 @@ export default function Auth() {
 
          localStorage.setItem("UserLogIn", JSON.stringify(logINResult));
 
-         router.push("/deashboard");
 
          if (typeof window !== "undefined") {
             const storage = localStorage.getItem("UserLogIn");
@@ -37,7 +36,11 @@ export default function Auth() {
 
                      if (id === 5) {
                         router.push("/Admin");
-                     } else {
+                     } else if(!id) {
+                        alert("Wrong password or email");   
+                        router.push("/");
+                     
+                     }else {
                         router.push("/deashboard");
                      }
                   }
