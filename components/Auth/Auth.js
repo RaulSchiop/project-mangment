@@ -55,7 +55,7 @@ export default function Auth() {
                () => {
                   localStorage.removeItem("UserLogIn");
                },
-               20072 * 60 * 60 * 10000
+               72 * 60 * 60 * 1000
             );
          }
       } catch (error) {
